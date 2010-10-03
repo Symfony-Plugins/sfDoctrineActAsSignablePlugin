@@ -9,11 +9,14 @@ changes.
 Instalation
 ===========
 
-Install the plugin:
+Install the plugin via the subversion repository by executing the following
+command from the project root directory:
 
-    $ ./symfony plugin-install http://plugins.symfony-project.com/sfDoctrineActAsSignablePlugin
-    
-or download the package and install it from the archive.
+    $ svn co http://svn.symfony-project.com/plugins/sfDoctrineActAsSignablePlugin/trunk plugins/sfDoctrineActAsSignablePlugin
+
+or by using the default symfony plugin install command:
+
+    $ ./symfony plugin:install sfDoctrineActAsSignablePlugin
 
 Usage
 =====

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Easily add created and updated by fields to your doctrine records that are
+ * Easily add created_by and updated_by fields to your doctrine records that are
  * automatically set when records are saved.
  *
  * @package     sfDoctrineActAsSignablePlugin

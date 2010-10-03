@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Listener for the Signable behavior which automatically sets the created
- * and updated by columns when a record is inserted and updated.
+ * Listener for the Signable behavior which automatically sets the created_by
+ * and updated_by columns when a record is inserted and updated.
  *
  * @package     sfDoctrineActAsSignablePlugin
  * @subpackage  listener
@@ -77,7 +77,7 @@ class Doctrine_Template_Listener_Signable extends Doctrine_Record_Listener
    */
   public function getUserId($type)
   {
-    // В режиме CLI возвращает null
+    // null in CLI mode
     if (0 != strncasecmp(PHP_SAPI, 'cli', 3))
     {
       $options = $this->_options[$type];
