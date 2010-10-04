@@ -45,6 +45,35 @@ integer):
     
     actAs: [Timestampable, Signable]
 
+Dependencies
+============
+
+There is no required dependency, although :
+
+  * [sfDoctrineGuardPlugin](http://www.symfony-project.org/plugins/sfDoctrineGuardPlugin)
+    will provide you basic but flexible and robust user management.
+
+Relations
+---------
+
+The plugin is provided with behavior relations for __sfDoctrineGuardPlugin__.
+For created and updated options which are defined as active (__not disabled__)
+and __integer type__, __creator__ and __updator__ relations are available,
+respectively. This means, that if you attach Signable behavior (defined as
+mentioned above) to any of your model, you can directly access sfGuardUser
+class objects. For example, the _Article_ model is defined as follows:
+
+    Article:
+      actAs:
+        Signable: ~
+
+you can access the user who created/updated the Article (integer option is the
+default in the Signable):
+
+    [php]
+    echo $article->getCreator();
+    echo $article->getUpdator()->customMethod();
+
 Example use cases
 =================
 
@@ -72,14 +101,6 @@ very difficult if you store user name as a string).
 
 This option is very useful when developing a CRM or ERP system where data
 modification is important (could be combined with data versioning).
-
-Dependencies
-============
-
-There is no required dependency, although :
-
-  * [sfDoctrineGuardPlugin](http://www.symfony-project.org/plugins/sfDoctrineGuardPlugin)
-    will provide you basic but flexible and robust user management.
 
 Thanks to
 ---------

@@ -16,11 +16,11 @@
     <email>tomasz.ducin@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2010-10-03</date>
+  <date>2010-10-17</date>
   <time>11:00:00</time>
   <version>
-    <release>1.1.0</release>
-    <api>1.1.0</api>
+    <release>1.2.0</release>
+    <api>1.2.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -67,6 +67,23 @@
   </phprelease>
 
   <changelog>
+
+    <release>
+      <version>
+        <release>1.2.0</release>
+        <api>1.2.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2010-10-17</date>
+      <license>MIT</license>
+      <notes>
+        * tkoomzaaskz: added relations with sfDoctrineGuardPlugin (creator, updator)
+      </notes>
+    </release>
 
     <release>
       <version>

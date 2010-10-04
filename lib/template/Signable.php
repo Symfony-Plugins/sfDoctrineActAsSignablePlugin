@@ -74,4 +74,30 @@ class Doctrine_Template_Signable extends Doctrine_Template
     }
     $this->addListener(new Doctrine_Template_Listener_Signable($this->_options));
   }
+
+  public function setUp()
+  {
+    // if sfDoctrineGuardPlugin is installed
+    if (class_exists('sfGuardUser'))
+    {
+      // created is active and integer type
+      if (!$this->_options['created']['disabled'] && $this->_options['created']['type'] == 'integer')
+      {
+        $this->hasOne('sfGuardUser as Creator', array(
+          'local' => $this->_options['created']['name'],
+          'foreign' => 'id',
+          'onDelete' => 'CASCADE')
+        );
+      }
+      // updated is active and integer type
+      if (!$this->_options['updated']['disabled'] && $this->_options['updated']['type'] == 'integer')
+      {
+        $this->hasOne('sfGuardUser as Updator', array(
+          'local' => $this->_options['updated']['name'],
+          'foreign' => 'id',
+          'onDelete' => 'CASCADE')
+        );
+      }
+    }
+  }
 }
