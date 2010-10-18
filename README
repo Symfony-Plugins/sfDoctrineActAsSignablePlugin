@@ -20,14 +20,14 @@ or by using the default symfony plugin install command:
 
 Usage
 =====
-  
+
 Add the desired columns to your schema.yml for the tables you want to be signed.
 You can use a string or an int type, the behavior will automatically detect the
 type and store the corresponding information depending on this type (for a
 string the username is stored, and for an integer it's the user's ID).
-  
+
     # You can either set the type of a column to a string (will store the username) or an integer (will store the user ID)
-    
+
     actAs:
       Signable:
         created:
@@ -39,10 +39,10 @@ string the username is stored, and for an integer it's the user's ID).
         updated:
           name: updated_by
           type: string
-  
+
 Also you may use global behavior in your doctrine schema (default field value is
 integer):
-    
+
     actAs: [Timestampable, Signable]
 
 Dependencies
