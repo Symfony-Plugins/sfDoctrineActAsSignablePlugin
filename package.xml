@@ -16,10 +16,10 @@
     <email>tomasz.ducin@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2010-10-18</date>
+  <date>2011-01-15</date>
   <time>11:00:00</time>
   <version>
-    <release>1.2.0</release>
+    <release>1.2.1</release>
     <api>1.2.0</api>
   </version>
   <stability>
@@ -67,6 +67,23 @@
   </phprelease>
 
   <changelog>
+
+    <release>
+      <version>
+        <release>1.2.1</release>
+        <api>1.2.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2011-01-15</date>
+      <license>MIT</license>
+      <notes>
+        * PHP_SAPI control improved (suggestion by Kay Petzold)
+      </notes>
+    </release>
 
     <release>
       <version>

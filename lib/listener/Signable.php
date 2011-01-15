@@ -78,7 +78,7 @@ class Doctrine_Template_Listener_Signable extends Doctrine_Record_Listener
   public function getUserId($type)
   {
     // null in CLI mode
-    if (0 != strncasecmp(PHP_SAPI, 'cli', 3))
+    if (0 != strncasecmp(PHP_SAPI, 'cli', 3) && sfConfig::get('sf_environment') != 'cli')
     {
       $options = $this->_options[$type];
       if ($options['expression'] !== false && is_string($options['expression']))
