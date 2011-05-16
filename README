@@ -33,6 +33,8 @@ string the username is stored, and for an integer it's the user's ID).
         created:
           name: created_by
           type: integer
+          onUpdate: CASCADE
+          onDelete: SET NULL
           options:
             notnull: true
             default: 1
@@ -44,6 +46,11 @@ Also you may use global behavior in your doctrine schema (default field value is
 integer):
 
     actAs: [Timestampable, Signable]
+
+For an integer type chosen, you may optionally select the foreign key reference
+option (according to [MySQL manual](http://dev.mysql.com/doc/refman/5.5/en/innodb-foreign-key-constraints.html)):
+
+    RESTRICT | CASCADE | SET NULL | NO ACTION
 
 Dependencies
 ============
@@ -105,5 +112,5 @@ modification is important (could be combined with data versioning).
 Thanks to
 ---------
 
-Thomas Boerger, Michael Klein, Kary Leong, geoffrey:
+Thomas Boerger, Michael Klein, Kary Leong, Daniel Möllenbeck, geoffrey:
 [The snippet this plugin is based on](http://snippets.symfony-project.org/snippet/281 "Snippet").

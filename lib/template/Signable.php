@@ -24,7 +24,8 @@ class Doctrine_Template_Signable extends Doctrine_Template
       'type' => 'integer',
       'disabled' => false,
       'expression' => false,
-      'options' => array()
+      'options' => array(),
+      'onDelete' => 'CASCADE'
     ),
     'updated' => array(
       'name' => 'updated_by',
@@ -32,7 +33,8 @@ class Doctrine_Template_Signable extends Doctrine_Template
       'disabled' => false,
       'expression' => false,
       'onInsert' => true,
-      'options' => array()
+      'options' => array(),
+      'onDelete' => 'CASCADE'
     ),
   );
 
@@ -86,7 +88,7 @@ class Doctrine_Template_Signable extends Doctrine_Template
         $this->hasOne('sfGuardUser as Creator', array(
           'local' => $this->_options['created']['name'],
           'foreign' => 'id',
-          'onDelete' => 'CASCADE')
+          'onDelete' => $this->_options['created']['onDelete'])
         );
       }
       // updated is active and integer type
@@ -95,7 +97,7 @@ class Doctrine_Template_Signable extends Doctrine_Template
         $this->hasOne('sfGuardUser as Updator', array(
           'local' => $this->_options['updated']['name'],
           'foreign' => 'id',
-          'onDelete' => 'CASCADE')
+          'onDelete' => $this->_options['updated']['onDelete'])
         );
       }
     }

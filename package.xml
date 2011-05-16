@@ -16,10 +16,10 @@
     <email>tomasz.ducin@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2011-01-15</date>
-  <time>11:00:00</time>
+  <date>2011-05-16</date>
+  <time>23:00:00</time>
   <version>
-    <release>1.2.1</release>
+    <release>1.2.2</release>
     <api>1.2.0</api>
   </version>
   <stability>
@@ -67,6 +67,23 @@
   </phprelease>
 
   <changelog>
+
+    <release>
+      <version>
+        <release>1.2.2</release>
+        <api>1.2.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2011-05-16</date>
+      <license>MIT</license>
+      <notes>
+        * reference options added (suggestion by Daniel Möllenbeck)
+      </notes>
+    </release>
 
     <release>
       <version>
