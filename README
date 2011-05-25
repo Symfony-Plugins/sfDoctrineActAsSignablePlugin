@@ -109,8 +109,19 @@ very difficult if you store user name as a string).
 This option is very useful when developing a CRM or ERP system where data
 modification is important (could be combined with data versioning).
 
+fixtures
+--------
+
+You may easily set the initial Signable values of any fixtures:
+
+    Model:
+      record:
+        data: some data
+        created_by: 1
+        updated_by: 2
+
 Thanks to
 ---------
 
-Thomas Boerger, Michael Klein, Kary Leong, Daniel Möllenbeck, geoffrey:
+Thomas Boerger, Michael Klein, Kary Leong, Daniel Möllenbeck, Christoph Berg, geoffrey:
 [The snippet this plugin is based on](http://snippets.symfony-project.org/snippet/281 "Snippet").

@@ -42,13 +42,15 @@ class Doctrine_Template_Listener_Signable extends Doctrine_Record_Listener
     if (!$this->_options['created']['disabled'])
     {
       $createdName = $this->_options['created']['name'];
-      $event->getInvoker()->$createdName = $this->getUserId('created');
+      if (!$event->getInvoker()->$createdName)
+        $event->getInvoker()->$createdName = $this->getUserId('created');
     }
 
     if (!$this->_options['updated']['disabled'] && $this->_options['updated']['onInsert'])
     {
       $updatedName = $this->_options['updated']['name'];
-      $event->getInvoker()->$updatedName = $this->getUserId('updated');
+      if (!$event->getInvoker()->$updatedName)
+        $event->getInvoker()->$updatedName = $this->getUserId('updated');
     }
   }
 

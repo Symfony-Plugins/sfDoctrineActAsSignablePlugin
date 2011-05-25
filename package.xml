@@ -16,10 +16,10 @@
     <email>tomasz.ducin@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2011-05-16</date>
+  <date>2011-05-25</date>
   <time>23:00:00</time>
   <version>
-    <release>1.2.2</release>
+    <release>1.2.3</release>
     <api>1.2.0</api>
   </version>
   <stability>
@@ -67,6 +67,23 @@
   </phprelease>
 
   <changelog>
+
+    <release>
+      <version>
+        <release>1.2.3</release>
+        <api>1.2.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2011-05-25</date>
+      <license>MIT</license>
+      <notes>
+        * initial value of created_by/updated_by saved - new records, fixtures, etc. (suggestion by Christoph Berg)
+      </notes>
+    </release>
 
     <release>
       <version>
